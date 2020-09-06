@@ -6,7 +6,7 @@
 
     <groupId>com.frank</groupId>
     <artifactId>simple2</artifactId>
-    <version>1.25-SNAPSHOT</version>
+    <version>1.26-SNAPSHOT</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>

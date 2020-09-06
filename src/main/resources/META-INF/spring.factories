@@ -1,4 +1,5 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
 com.auto.config.MyAutoConfig,\
 com.auto.config.MyAutoConfig2,\
-com.auto.config.EncrypteFilter
+com.auto.config.EncrypteFilter,\
+com.auto.advice.ResponseBodyEncryptAdvice
