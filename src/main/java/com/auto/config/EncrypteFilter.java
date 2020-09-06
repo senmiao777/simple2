@@ -1,5 +1,6 @@
 package com.auto.config;
 
+import com.auto.Constant;
 import org.springframework.context.annotation.Configuration;
 
 import javax.servlet.*;
@@ -7,6 +8,7 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.Map;
+import java.util.Random;
 
 /**
  * @author frank
@@ -34,14 +36,14 @@ public class EncrypteFilter implements Filter {
         for (Map.Entry<String, String[]> param : params.entrySet()) {
             String key = param.getKey();  // 参数名
             String[] value = param.getValue();  // 参数值
-            System.out.println("key="+ key+"value="+value);
+            System.out.println("key=" + key + "value=" + value);
 
         }
 
         if (stockCode != null) {
-            int i = 1100;
-            System.out.println("url="+ request.getRequestURL());
-            request.setAttribute("userId", i);
+            int i = new Random().nextInt();
+            System.out.println("url=" + request.getRequestURL() + "随机数=" + i);
+            request.setAttribute(Constant.ATTRIBUTE_KEY.getCode(), i);
 
         } else {
             System.out.println("stockCode is null");
